@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="CornerRadius">14dp</dimen>
+    <dimen name="StandartMargin">10dp</dimen>
+    <dimen name="StandartPadding">10dp</dimen>
+</resources>
