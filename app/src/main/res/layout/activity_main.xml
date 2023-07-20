@@ -1,44 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_percent="0.9"
-        app:layout_constraintHeight_percent="0.95">
+        style="@style/CenterElements"
+        tools:ignore="MissingConstraints">
 
-        <GridLayout
+        <EditText
+            android:id="@+id/nameBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_style"
-            android:minHeight="100dp">
-
-            <EditText
-                android:id="@+id/nameBox"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Введите текст"
-                android:background="@null"
-                android:minHeight="100dp"
-                android:gravity="top"
-                android:inputType="textMultiLine" />
-        </GridLayout>
+            android:hint="Введите текст"
+            style="@style/TextStyle"
+            android:background="@drawable/text_background_style"
+            android:minHeight="100dp"
+            android:inputType="textMultiLine" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/StandartMargin"/>
+            android:layout_height="@dimen/defaultMargin"/>
 
         <Button
-            android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Сохранить заметку"
@@ -46,18 +34,14 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/StandartMargin"/>
+            android:layout_height="@dimen/defaultMargin"/>
 
-        <GridLayout
+        <TextView
+            android:id="@+id/nameView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_style">
-            <TextView
-                android:id="@+id/nameView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="18sp"
-                android:gravity="top"/>
-        </GridLayout>
+            style="@style/TextStyle"
+            android:background="@drawable/text_background_style" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause(){
         super.onPause();
 
-        String name = nameBox.getText().toString();
+        String name = nameView.getText().toString();
         prefEditor = settings.edit();
         prefEditor.putString(PREF_NAME, name);
         prefEditor.apply();
