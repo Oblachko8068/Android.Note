@@ -5,8 +5,8 @@
     <color name="border_dark">#FF000000</color>
 
     <!-- Цвета фонов -->
-    <color name="light_primary">#f5c54c</color>
-    <color name="main_background">#FFD7BF</color>
+    <color name="light_primary">#8a6507</color>
+    <color name="main_background">#faf7f0</color>
     <color name="text_block_background">#F2DDC6</color>
 
     <!-- Цвета текстов -->
