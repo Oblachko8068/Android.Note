@@ -6,11 +6,13 @@
 
     <!-- Цвета фонов -->
     <color name="light_primary">#8a6507</color>
+    <color name="dark_primary">#FF000000</color>
     <color name="main_background">#faf7f0</color>
     <color name="text_block_background">#F2DDC6</color>
 
     <!-- Цвета текстов -->
     <color name="text_default">#FF000000</color>
-    <color name="text_ligth">#FFFFFF</color>
+    <color name="text_ligth">#FF000000</color>
+    <color name="text_dark">#FFFFFF</color>
 
 </resources>
