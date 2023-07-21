@@ -1,9 +1,7 @@
 package com.example.justnote;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
-import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String PREFS_FILE = "Account";
     private static final String PREF_NAME = "Name";
+    private final static String nameVariableKey = "NAME_VARIABLE";
     EditText nameBox;
     SharedPreferences settings;
     SharedPreferences.Editor prefEditor;
@@ -31,6 +30,18 @@ public class MainActivity extends AppCompatActivity {
         nameBox.setText(name);
 
 
+    }
+    //сохранение состояния при повороте экрана
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        String name = nameView.getText().toString();
+        outState.putString(nameVariableKey, name);
+        super.onSaveInstanceState(outState);
+    }
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        nameView.setText(savedInstanceState.getString(nameVariableKey));
     }
     // сохранение введенного текста
     @Override
